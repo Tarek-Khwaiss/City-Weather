@@ -38,7 +38,7 @@ cityinput.addEventListener('submit', (e) => {
     e.preventDefault();
     inputData = cityinput.city.value;
     getLocationKey(inputData).then((data) => {
-        console.log(data[0]);
+        // console.log(data[0]);
         return getForcast(data[0].Key)
             .then((data) => {
                 // function to change the html template and add the information
