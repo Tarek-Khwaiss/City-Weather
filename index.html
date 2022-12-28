@@ -11,21 +11,27 @@
 </head>
 
 <body class="background">
-
-    <div class="text-center text-light">
-        <h1 class="display-3 my-5 weather-font">Your City Weather</h1>
-        <form class="container">
-            <input class="form-control" name="city" type="text" placeholder="location..">
+    <div class="text-center text-light  mx-auto container my-5">
+        <h1 class="display-3 my-5 weather-font">City Weather</h1>
+        <form class="container location">
+            <label for="city">Enter your location to check the weather</label>
+            <input class="form-control mt-3" name="city" type="text" placeholder="location..">
         </form>
 
-        <div>
-
+        <div class="card rounded-2 shadow-lg my-3">
+            <img src="assets/sunny.gif" class="card-img-top">
+            <div class="icon bg-light mx-auto text-center">
+                <!--icon-->
+            </div>
+            <div class="text-center text-uppercase text-muted details">
+                <h5 id="cityName" class="my-3">City</h5>
+                <div class="my-3">Weather condition</div>
+                <div class="display-4 my-4">
+                    <span>temp</span>
+                    <span>&deg;C</span>
+                </div>
+            </div>
         </div>
-
-
-
-
-
     </div>
 
     <script src="scripts/weather.js"></script>
