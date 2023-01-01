@@ -1,6 +1,8 @@
 const key = 'eiAAAcqE7f8iWXKSrYyzGpCV3T832Npq';
 const cityinput = document.querySelector('.location');
 
+// query statements
+
 
 const getLocationKey = async (cityName) => {
 
@@ -16,13 +18,7 @@ const getLocationKey = async (cityName) => {
 }
 
 const getForcast = async (cityKey) => {
-    // const key = '';
-    // getLocationKey(inputData)
-    //     .then((data) => {
-    //         // here we have to extract the key from the json object
-    //         key = data;
-    //     })
-    //     .catch('an error happened :/');
+
     const baseString = 'http://dataservice.accuweather.com/currentconditions/v1/';
     const query = `${cityKey}?apikey=${key}`;
 
@@ -34,18 +30,6 @@ const getForcast = async (cityKey) => {
 };
 
 
-cityinput.addEventListener('submit', (e) => {
-    e.preventDefault();
-    inputData = cityinput.city.value;
-    getLocationKey(inputData).then((data) => {
-        // console.log(data[0]);
-        return getForcast(data[0].Key)
-            .then((data) => {
-                // function to change the html template and add the information
-                console.log(data);
-            })
-    })
-        .catch('an error happened :/');
-});
 
+// function to modify the dom using the data object
 
